@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #030712;
+    color: #f8fafc;
+  }
+}
+
+/* Accessibility: High Contrast Mode */
+.high-contrast {
+  --tw-border-opacity: 1 !important;
+  filter: contrast(1.2);
+}
+
+.high-contrast button {
+  border-width: 2px !important;
+}
+
+.high-contrast input {
+  border-width: 2px !important;
+}
+
+/* Accessibility: Large Text Mode */
+.large-text {
+  font-size: 115%;
+}
+
+.large-text p,
+.large-text span,
+.large-text button {
+  line-height: 1.6;
+}
+
+/* Tabular figures for telemetry & numbers */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
